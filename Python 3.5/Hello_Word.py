@@ -41,3 +41,53 @@ print("This Line is added to same line as end = \" \"")
 # Print multiple times
 
 print("Bhushan\n" * 5)
+
+# 2. LISTS
+
+# declare
+
+consonants = ['x', 'y', 'z', 'p']
+vowels = ['a', 'e', 'i', 'o', 'u']
+
+print("1. consonants", consonants)
+
+# combine lists
+
+combined_lists = consonants + vowels
+print("2.", combined_lists)
+
+combined_lists = [consonants, vowels]
+print("3.", combined_lists)
+
+# replace and access and print
+
+consonants[0] = 'q'
+print("4.", consonants[0])
+print("5.", combined_lists[0][0])
+print("6.", consonants[0:2])
+
+# functions
+
+print("7.", consonants.count('z'))
+
+consonants.append('b')
+print("8.", consonants)
+
+consonants.reverse()
+print("9.", consonants)
+
+consonants.remove('z')
+print("10.", consonants)
+
+consonants.insert(2, 'z')
+print("10.", consonants)
+
+consonants.sort()
+print("11.", consonants)
+
+consonants.sort(reverse=True)
+print("12.", consonants)
+
+print("13.", max(consonants))
+print("14.", min(consonants))
+print("15.", len(consonants))
