@@ -210,3 +210,14 @@ print("10.", len(sample_long_string))  # return length
 print("11.", all_alpha.split('p'))  # split in list at char 'p'
 print("12.", all_alpha.strip('z'))  # remove 'z'from start and end of string
 print("13.", all_alpha.replace('o', ' '))  # replace 'o' with space
+
+# FILE IO
+
+test = open("sample.txt", "wb")
+print("FILES")
+print(test.name)
+print(test.mode)
+test.write(bytes("Sample Contents in file", 'UTF-8'))
+test.close()
+test = open("sample.txt")
+print(test.readline())
