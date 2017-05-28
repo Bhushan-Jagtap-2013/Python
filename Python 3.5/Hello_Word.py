@@ -120,3 +120,16 @@ print("3.", len(string_to_number))
 print("4.", string_to_number.get('three'))
 print("5.", string_to_number.values())
 print("6.", string_to_number.keys())
+
+# CONDITIONALS
+
+print("CONDITIONALS")
+if 10 > 20:  # == >= <= != and or not
+    print("Greater")
+elif 15 > 20:
+    print("Little Greater")
+else:
+    print("Even More")
+
+if ((10 < 20) and (10 > 5)):
+    print("HiFi")
