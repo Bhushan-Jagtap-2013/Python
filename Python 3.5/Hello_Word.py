@@ -1,5 +1,4 @@
 import random
-import sys
 
 # print hello world
 
@@ -186,7 +185,28 @@ def sum_two(num1, num2):
     return s
 
 
-num1 = int(sys.stdin.readline())
-num2 = int(sys.stdin.readline())
+# num1 = int(sys.stdin.readline())
+# num2 = int(sys.stdin.readline())
+num1 = num2 = 10
 total = sum_two(num1, num2)
 print("1.", total)
+
+# STRINGS FUNCTIONS
+
+print("STRING FUNCTIONS")
+sample_long_string = "0123456789"
+print("1.", sample_long_string[2:5])  # from 2 to 5
+print("2.", sample_long_string[-4:])  # last 4 num
+print("3.", sample_long_string[:-4])  # start to except last 4
+print("4.", sample_long_string[-4:] + " last 4 numbers")  # concat substring
+print("5.", "character %c | decimal %d | float %.5f | string %s" % ('a', 10, 20, 'Sample'))
+
+all_alpha = "abcdefghijklmnopqrstuvwxyzzzzzz"
+print("6.", all_alpha.capitalize())  # Capitalize start
+print("7.", all_alpha.find("cd"))  # find sub string
+print("8.", all_alpha.isalpha())  # check all alpha
+print("9.", sample_long_string.isalnum())  # check all num
+print("10.", len(sample_long_string))  # return length
+print("11.", all_alpha.split('p'))  # split in list at char 'p'
+print("12.", all_alpha.strip('z'))  # remove 'z'from start and end of string
+print("13.", all_alpha.replace('o', ' '))  # replace 'o' with space
