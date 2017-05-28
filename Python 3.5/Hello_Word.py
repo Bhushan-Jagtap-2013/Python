@@ -1,4 +1,5 @@
 import random
+import sys
 
 # print hello world
 
@@ -174,3 +175,18 @@ while i < 10:
         print("C", end=" ")
         continue
     i = i + 1
+print("\n")
+
+# FUNCTIONS
+print("FUNCTIONS")
+
+
+def sum_two(num1, num2):
+    s = num1 + num2
+    return s
+
+
+num1 = int(sys.stdin.readline())
+num2 = int(sys.stdin.readline())
+total = sum_two(num1, num2)
+print("1.", total)
