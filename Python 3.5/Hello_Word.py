@@ -1,3 +1,5 @@
+import random
+
 # print hello world
 
 # comment
@@ -133,3 +135,42 @@ else:
 
 if ((10 < 20) and (10 > 5)):
     print("HiFi")
+
+# LOOPS
+print("\nLOOPS")
+
+for x in range(1, 10):
+    print(x, end=" ")
+print("\n")
+
+for x in consonants:
+    print(x, end=" ")
+print("\n")
+
+for x in combined_lists:
+    for y in x:
+        print(y, end=" ")
+print("\n")
+
+# while loop we don't know in advance how many time we need to loop
+
+print("WHILE")
+
+rnd = random.randrange(1, 10)
+while rnd != 5:
+    print(rnd, end=" ")
+    rnd = random.randrange(1, 10)
+print("\n")
+
+i = 0
+while i < 10:
+    if i % 2 == 0:
+        print(i, end=" ")
+    elif i == 7:
+        print("B", end=" ")
+        break
+    else:
+        i = i + 1
+        print("C", end=" ")
+        continue
+    i = i + 1
