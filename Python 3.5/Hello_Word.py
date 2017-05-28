@@ -101,3 +101,22 @@ my_list = list(my_tuple)
 my_tuple = tuple(my_list)
 
 # we can use min max len in tuple
+
+# DICTIONARY
+# Unique key for each value
+# we can not join dictionary with +
+
+string_to_number = {'one': 1,
+                    'two': 2,
+                    'three': 3,
+                    'four': 4,
+                    'five': 6}
+
+print("DICTIONARY")
+print("1.", string_to_number)
+string_to_number['one'] = 8
+print("2.", string_to_number['one'])
+print("3.", len(string_to_number))
+print("4.", string_to_number.get('three'))
+print("5.", string_to_number.values())
+print("6.", string_to_number.keys())
