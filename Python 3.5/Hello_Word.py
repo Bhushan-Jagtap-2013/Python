@@ -91,3 +91,13 @@ print("12.", consonants)
 print("13.", max(consonants))
 print("14.", min(consonants))
 print("15.", len(consonants))
+
+# TUPLE
+# can not be able to change value easily
+my_tuple = (1, 2, 3, 4)
+
+# Conversion between tuple and list
+my_list = list(my_tuple)
+my_tuple = tuple(my_list)
+
+# we can use min max len in tuple
