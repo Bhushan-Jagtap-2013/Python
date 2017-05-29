@@ -1,3 +1,4 @@
+import os
 import random
 
 # print hello world
@@ -221,3 +222,88 @@ test.write(bytes("Sample Contents in file", 'UTF-8'))
 test.close()
 test = open("sample.txt")
 print(test.readline())
+test.close()
+
+os.remove("sample.txt")
+
+# CLASS
+
+print("\nCLASSES\n")
+
+
+class Numbers:
+    __num = 0
+    __class_name = None
+
+    def __init__(self, num):
+        self.__num = num
+        self.__class_name = "Numbers"
+
+    def get_type(self):
+        return "Numbers"
+
+    def get_number(self):
+        return self.__num
+
+    def set_num(self, num):
+        self.__num = num
+
+    def to_string(self):
+        return "Number is {} in class {}".format(self.__num, self.__class_name)
+
+
+num = Numbers(10)
+print(num.to_string())
+
+
+# INHERITANCE
+# OVERLOADING print
+# OVERRIDING to_string
+
+class DecimalsClass(Numbers):
+    __decimal_points = 0
+
+    def __init__(self, decimals, n):
+        self.__decimal_points = decimals
+        super(DecimalsClass, self).__init__(n)  # calling super class constructor
+
+    def get_decimals(self):
+        return self.__decimal_points
+
+    def set_decimals(self, n):
+        self.__decimal_points = n
+
+    def get_type(self):
+        return "Decimals"
+
+    def print_option(self, op=None):  # Overloading
+        if op is None:
+            print("DEFAULT")
+        else:
+            print("WITH OPTION")
+
+    def to_string(self):  # overriding
+        return "Number is {} in class {} and Decimals are {}".format(super().get_number(),
+                                                                     super().get_type(), self.__decimal_points)
+
+
+# inheritance
+d = DecimalsClass(10, 20)
+print(d.to_string())
+
+# function overloading
+d.print_option()
+d.print_option(5)
+
+# POLYMORPHISM
+print("\nPOLYMORPHISM\n")
+
+
+class GetTypes:
+    def get_type(self, obj):
+        return obj.get_type()
+
+
+b = GetTypes()
+print(b.get_type(d))
+print(b.get_type(num))
