@@ -1,2 +1,2 @@
 # Python-Examples
-These are sample python scripts which explains syntaxt of various basic concepts.
+These are sample python scripts which explains syntax of various basic concepts.
